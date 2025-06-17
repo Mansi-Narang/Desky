@@ -6,10 +6,14 @@ function createWindow(){
         height: 1000
     })
 
-    win.loadFile('dashboard.html');
+    win.loadFile('home.html');
 }
 
 app.whenReady()
 .then(() => {
     createWindow();
+})
+
+app.on("window-all-closed", ()=>{
+    app.quit();
 })

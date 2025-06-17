@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desky</title>
+    <link href="dashboard.css" rel="stylesheet"/>
 </head>
 <body>
-    <div>
-        <h2 class="heading">Welcome to Desky - Your day’s little planner!</h2>
-        <img src="#" />
-        <button>Start</button>
+    <div class="dashboard">
+        <div class="details">
+            <div>
+                <p id="day">Thursday</p>
+                <p id="date">17</p>
+                <p id="month">September</p>
+            </div>
+            <div class="task">
+                <div class="progression">
+                    <p>Progress</p>
+                    <progress id="progress" value="0" max="100"></progress>
+                </div>
+                <div class="">
+                    <input type="text" id="addTask" />
+                    <button id="add">+</button>
+                </div>
+            </div>
+        </div>
+        <div >
+            <ul class="tasklist"></ul>
+        </div>
+        <button class="finish">Finish Day</button>
     </div>
+
+    <script src="dashboard.js"></script>
 </body>
 </html>

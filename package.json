@@ -1,0 +1,32 @@
+{
+  "name": "to-do-desktop-app",
+  "version": "1.0.0",
+  "description": "Desky is a cute and minimal to-do list desktop app built with Electron.js, designed to help you organize your day with zero distractions and full offline support.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mansi-Narang/Desky.git"
+  },
+  "keywords": [
+    "Desky",
+    "Todo",
+    "cute",
+    "management",
+    "mansi",
+    "task",
+    "manager"
+  ],
+  "author": "Mansi Narang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mansi-Narang/Desky/issues"
+  },
+  "homepage": "https://github.com/Mansi-Narang/Desky#readme",
+  "devDependencies": {
+    "electron": "^36.4.0"
+  }
+}

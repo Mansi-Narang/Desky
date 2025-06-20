@@ -5,30 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desky</title>
     <link href="dashboard.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Pixelify+Sans:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="dashboard">
+         <button class="theme-toggle" onclick="toggleTheme()">🐻 Switch Mood</button>
         <div class="details">
             <div>
-                <p id="day">Thursday</p>
-                <p id="date">17</p>
-                <p id="month">September</p>
+                <p id="day"></p>
+                <p id="date"></p>
+                <p id="month"></p>
+               
+                <input type="date" id="datePicker" max="" />
+
             </div>
             <div class="task">
                 <div class="progression">
                     <p>Progress</p>
                     <progress id="progress" value="0" max="100"></progress>
                 </div>
-                <div class="">
+                <div>
                     <input type="text" id="addTask" />
                     <button id="add">+</button>
                 </div>
             </div>
         </div>
+        <div class="quote-box">
+  <p class="quote">🌼 A little progress each day adds up to big results.</p>
+</div>
+
         <div >
             <ul class="tasklist"></ul>
         </div>
-        <button class="finish">Finish Day</button>
+        <button class="finish">🐻 Finish Day</button>
     </div>
 
     <script src="dashboard.js"></script>

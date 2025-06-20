@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(145deg, #ffe0f0, #fcf4ff); /* Pastel pink to lilac */
+  font-family: "Pixelify Sans", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* CARD CONTAINER */
+.landing {
+  background-color: #fff5f8;
+  padding: 50px 40px;
+  border-radius: 32px;
+  max-width: 440px;
+  width: 90%;
+  box-shadow:
+    0 12px 30px rgba(244, 164, 196, 0.3),
+    inset 0 0 12px rgba(255, 255, 255, 0.5);
+  text-align: center;
+  position: relative;
+  animation: floatUp 1s ease forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADER TEXT */
+.heading {
+  color: #d1497f;
+  font-size: 28px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 0 #fff;
+  position: relative;
+}
+
+.heading::after {
+  position: absolute;
+  right: -24px;
+  top: -8px;
+  font-size: 28px;
+}
+
+/* ILLUSTRATION */
+.hero-img {
+  width: 250px;
+  height: auto;
+  border-radius: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 3px dashed #ffd9e6;
+  background-color: #fcbad3;
+  animation: popIn 1.2s ease forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* CTA BUTTON */
+.start-btn {
+  background: linear-gradient(to right, #ffb6c1, #ff89bb);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(255, 105, 135, 0.2);
+  font-family: "Pixelify Sans", cursive;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background: linear-gradient(to right, #ff6f91, #f55b92);
+  transform: translateY(-2px) scale(1.05);
+}

@@ -1,3 +1,266 @@
-.done{
-    text-decoration: line-through;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pixelify Sans", cursive;
+  background-color: #ec9db3;
+  color: #4e4e4e;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+   
+.dashboard {
+  width: 100%;
+  max-width: 640px;
+  background-color: #ffe8f0;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 18px 40px rgba(237, 225, 225, 0.3);
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 20px;
+}
+
+.details p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ec407a;
+}
+
+#day::before {
+  content: "📓 ";
+}
+#month::before {
+  content: "🗓️ ";
+}
+#date::before {
+  content: "🌸 ";
+}
+
+
+.progression p {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #ec407a;
+}
+
+progress {
+  height: 18px;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #fbcedd;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #ec407a;
+  border-radius: 10px;
+  transition: width 0.4s ease-in-out;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.task input[type="text"] {
+  flex: 1;
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: none;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+}
+
+.task button#add {
+  padding: 12px 16px;
+  border-radius: 50%;
+  background: #f48fb1;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.task button#add:hover {
+  background: #ec407a;
+}
+
+.tasklist {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.tasklist li {
+  font-family: "Rubik";
+  background: #fff;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tasklist li::before {
+  content: "🧸 ";
+  margin-right: 6px;
+}
+
+.tasklist li.done {
+  background-color: #e0f7fa;
+  color: #6b6b6b;
+}
+
+.tasklist li.done::before {
+  content: "✅";
+}
+
+.tasklist li button {
+  background: none;
+  border: none;
+  color: #ec407a;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.finish {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  background-color: #b2f2bb;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d2d2d;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: "Rubik";
+}
+
+.finish:hover {
+  background-color: #9ef2a1;
+}
+
+progress {
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+#datePicker {
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: 2px solid #ffc0cb;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #fff0f5;
+  color: #57405f;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+
+
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #eee;
+    color: #4c3e54;
+    font-size: 14px;
+    font-family: "Rubik", cursive;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 192, 203, 0.2);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #fbcedd;
+}
+
+
+
+body.dark-mode {
+    background-color: #2e2a36;
+    color: #eee;
+}
+
+body.dark-mode .dashboard {
+    background-color: #3c3343;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .details p,
+body.dark-mode .quote,
+body.dark-mode .tasklist li {
+    color: #eee;
+}
+
+body.dark-mode .tasklist li {
+    background-color: #4c3e54;
+}
+
+body.dark-mode .tasklist li.done {
+    background-color: #555;
+}
+
+body.dark-mode .task input[type="text"] {
+    background-color: #eee;
+    color: #222;
+}
+
+body.dark-mode .quote-box {
+    background-color: #57405f;
+    border-left: 4px solid #dda0dd;
+}
+
+body.dark-mode .finish {
+    background-color: #a3f7bf;
+    color: #222;
+}
+
+
+.quote-box {
+    background-color: #fffafc;
+    border-left: 4px solid #ff9aa2;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(255, 105, 135, 0.1);
+
+}
+
+.quote {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    font-family: "Rubik";
+    text-align: center;
 }

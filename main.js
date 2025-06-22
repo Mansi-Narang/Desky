@@ -1,9 +1,10 @@
+require('dotenv').config()
 const {app, BrowserWindow, ipcMain} = require('electron');
 const mongoose = require('mongoose');
 const todoModel = require('./ToDoSchema');
 const path = require('path');
 
-mongoose.connect("mongodb://127.0.0.1:27017/desky")
+mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
     console.log("Mongo DB connected");
 })

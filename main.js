@@ -17,12 +17,15 @@ function createWindow(){
         width: 1000,
         height: 1000,
         webPreferences: {
-            preload: path.resolve(__dirname, 'preload.js')
+            preload: path.resolve(__dirname, 'preload.js'),
+            contextIsolation: true,
+            nodeIntegration: false
         }
     })
 
+    if(win.maximizable) win.maximize();
+
     app.setName('Desky');
-    app.getFileIcon('')
     win.loadFile('home.html');
     win.removeMenu()
 }

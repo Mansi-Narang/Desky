@@ -13,13 +13,6 @@ Desky is a cute and minimal to-do list desktop app built with Electron.js, desig
 - 💾 Data stored remotely (MongoDB)
 - 🐻 Cute and pastel-themed UI
 
-## Download
-
-You can download the latest Windows `.exe` installer from the [Releases](https://github.com/Mansi-Narang/Desky/releases) page.
-
-- [Download Desky for Windows (.exe)](https://github.com/Mansi-Narang/Desky/releases/latest)
-
-> After downloading, run the installer and follow the instructions to install Desky on your desktop.
 
 ## Getting Started (Development)
 

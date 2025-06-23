@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const todoModel = require('./ToDoSchema');
 const path = require('path');
 
-mongoose.connect("mongodb+srv://mansinarang155:Sl4GZrt9kBqtyqzM@desky.q81c6zf.mongodb.net/?retryWrites=true&w=majority&appName=Desky")
+mongoose.connect("MONGODBURL")
 .then(()=>{
     console.log("Mongo DB connected");
 })

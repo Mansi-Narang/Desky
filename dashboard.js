@@ -33,7 +33,6 @@ function addInQueue(task){
     delBtn.addEventListener("click", (event) => {
         event.stopPropagation();
         newTask.remove();
-        console.log(event.target.id);
         Api.deleteToDo(event.target.id);
         updateProgressBar();
     });
@@ -92,7 +91,6 @@ addBtn.addEventListener("click", () => {
 
 taskList.addEventListener("click", async function(event){
     event.target.classList.toggle("done");
-    console.log(event.target);
     completeTask(event.target.id);
     updateProgressBar();
 })

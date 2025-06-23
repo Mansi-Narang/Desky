@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const todoModel = require('./ToDoSchema');
 const path = require('path');
 
-mongoose.connect("MONGODBURL")
+mongoose.connect("mongodb://127.0.0.1:27017/desky")
 .then(()=>{
     console.log("Mongo DB connected");
 })
@@ -27,7 +27,8 @@ function createWindow(){
 
     app.setName('Desky');
     win.loadFile('home.html');
-    win.removeMenu()
+    win.removeMenu();
+    // win.webContents.openDevTools();
 }
 
 app.whenReady()

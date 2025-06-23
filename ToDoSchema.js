@@ -20,7 +20,7 @@ const todoSchema = new Schema({
     completeTask : {
         type : Boolean,
         default : false
-    }
+    },
 }, {id: false})
 
 const todoModel = new model("ToDo", todoSchema);

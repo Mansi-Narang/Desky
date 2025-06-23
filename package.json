@@ -1,6 +1,7 @@
 {
   "name": "Desky",
   "version": "1.0.0",
+  "productName" : "Desky",
   "description": "Desky is a cute and minimal to-do list desktop app built with Electron.js, designed to help you organize your day with zero distractions and full offline support.",
   "main": "main.js",
   "scripts": {

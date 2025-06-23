@@ -1,10 +1,10 @@
-require('dotenv').config()
+if (require('electron-squirrel-startup')) return;
 const {app, BrowserWindow, ipcMain} = require('electron');
 const mongoose = require('mongoose');
 const todoModel = require('./ToDoSchema');
 const path = require('path');
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect("mongodb+srv://mansinarang155:Sl4GZrt9kBqtyqzM@desky.q81c6zf.mongodb.net/?retryWrites=true&w=majority&appName=Desky")
 .then(()=>{
     console.log("Mongo DB connected");
 })
@@ -22,8 +22,9 @@ function createWindow(){
     })
 
     app.setName('Desky');
-
+    app.getFileIcon('')
     win.loadFile('home.html');
+    win.removeMenu()
 }
 
 app.whenReady()

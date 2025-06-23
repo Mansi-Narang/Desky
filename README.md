@@ -2,9 +2,9 @@
 
 Desky is a cute and minimal to-do list desktop app built with Electron.js, designed to help you organize your day with zero distractions and full offline support.
 
-![Desky Screenshot](./demoss/HomePage.png)
-![Dashboard](./demoss/Dashboard_day.png)
-![Dashboard](./demoss/Dashboard_night.png)
+![Desky Screenshot](./demoSS/Home.png)
+![Dashboard](./demoSS/Dashboard_day.png)
+![Dashboard](./demoSS/Dashboard_night.png)
 
 ## Features
 
